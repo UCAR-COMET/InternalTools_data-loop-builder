@@ -55,7 +55,7 @@ class HTMLGenerator {
         };
 
         // Add CSS file to src folder
-        folderStructure.files['src'].files['styles.css'] = {
+        folderStructure.files['src'].files['looper.css'] = {
             type: 'text/css',
             content: this.generateCSSFile(width)
         };
@@ -115,7 +115,7 @@ class HTMLGenerator {
 <head>
     <meta charset="UTF-8">
     <title>${title} - Data Looper</title>
-    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/looper.css">
     <script src="src/jquery.min.js"></script>
     <script src="src/looper.js"></script>
     <script>
@@ -167,7 +167,7 @@ ${imageElements}
 
 body { 
     margin: 0; 
-    background: #f5f5f5; 
+    background: #fff; 
     font-family: Arial, sans-serif; 
 }
 
@@ -259,13 +259,13 @@ body {
     border-radius: 50%; 
 }
 
-.play::after { content: "▶"; }
-.pause::after { content: "⏸"; }
-.reset::after { content: "⏹"; }
-.prev::after { content: "⏮"; }
-.next::after { content: "⏭"; }
-.slower::after { content: "−"; }
-.faster::after { content: "+"; }
+.play::after { content: "▶"; vertical-align: middle; }
+.pause::after { content: "⏸"; vertical-align: middle; }
+.reset::after { content: "⏹"; vertical-align: middle; }
+.prev::after { content: "⏮"; vertical-align: middle; }
+.next::after { content: "⏭"; vertical-align: middle; }
+.slower::after { content: "−"; vertical-align: middle; }
+.faster::after { content: "+"; vertical-align: middle; }
 .invisible { visibility: hidden; }
 
 /* Overlay Styles */
@@ -505,14 +505,14 @@ body {
                     $nav_right.append('<span class="counter"><b class="slidenumber">1</b>/<b class="totalslides">' + $this.children('img').length + '</b></span>'); 
                 }
                 if (options.slide_reset) { 
-                    $nav_right.append('<a href="#" class="reset" title="Stop/Reset"></a>'); 
+                    $nav_right.append('<a href="javascript:void(0);" class="reset" title="Stop/Reset"></a>'); 
                 }
-                $nav_right.append('<a href="#" class="pauseplay pause" title="Play/Pause"></a>');
+                $nav_right.append('<a href="javascript:void(0);" class="pauseplay pause" title="Play/Pause"></a>');
                 if (options.forward_backward) { 
-                    $nav_right.append('<a href="#" class="prev" title="Previous"></a><a href="#" class="next" title="Next"></a>'); 
+                    $nav_right.append('<a href="javascript:void(0);" class="prev" title="Previous"></a><a href="javascript:void(0);" class="next" title="Next"></a>'); 
                 }
                 if (options.speed_controls) { 
-                    $nav_right.append('<span class="speed"><a href="#" class="slower" title="Slower"></a><a href="#" class="faster" title="Faster"></a></span>'); 
+                    $nav_right.append('<span class="speed"><a href="javascript:void(0);" class="slower" title="Slower"></a><a href="javascript:void(0);" class="faster" title="Faster"></a></span>'); 
                 }
             }
         }); 

@@ -73,7 +73,7 @@ generated_folder/
 ├── src/
 │   ├── jquery.min.js   # Embedded jQuery
 │   ├── looper.js       # Animation controller
-│   └── styles.css      # Responsive CSS
+│   └── looper.css      # Responsive CSS
 └── [image files]       # Original filenames preserved
 ```
 

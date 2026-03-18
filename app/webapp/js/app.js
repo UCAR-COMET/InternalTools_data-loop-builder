@@ -435,7 +435,7 @@ class LoopBuilderApp {
         const config = this.getConfigFromResult(result);
         
         // Get the CSS and JS content
-        const cssContent = folderStructure.files['src'].files['styles.css'].content;
+        const cssContent = folderStructure.files['src'].files['looper.css'].content;
         const jsContent = folderStructure.files['src'].files['looper.js'].content;
         const jqueryContent = folderStructure.files['src'].files['jquery.min.js'].content;
         

@@ -263,7 +263,7 @@ loop_name/
 ├── image_003.jpg
 ├── overlay.png         # Overlay file (if detected)
 └── src/                # Source files folder
-    ├── styles.css      # Loop styling
+    ├── looper.css      # Loop styling
     ├── jquery.min.js   # jQuery library
     └── looper.js       # Animation script
 ```
